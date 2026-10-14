@@ -5,6 +5,7 @@ import {
   useState,
 } from "react";
 import { createPortal } from "react-dom";
+import { GOOGLE_FORM_URL } from "../../constants";
 import "../../styles/Animations.css";
 
 /* =========================================================
@@ -483,14 +484,12 @@ function Animations() {
   ========================================================= */
 
   const startCreating = () => {
-    const encodedPrompt =
-      encodeURIComponent(
-        activeVideo.prompt
-      );
-
-    window.location.hash =
-      `#page-studio?prompt=${encodedPrompt}`;
-  };
+  window.open(
+    GOOGLE_FORM_URL,
+    "_blank",
+    "noopener,noreferrer"
+  );
+};
 
 
   /* =========================================================

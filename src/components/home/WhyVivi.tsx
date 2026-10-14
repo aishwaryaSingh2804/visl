@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
-import { ROUTES } from '../../lib/routes';
+// import { Link } from 'react-router-dom';
+// import { ROUTES } from '../../lib/routes';
+import { GOOGLE_FORM_URL } from '../../constants.ts';
 import '../../styles/WhyVivi.css';
 const features = [
   {
@@ -253,11 +254,16 @@ window into a flooded city...
   <h3>{feature.title}</h3>
   <p>{feature.description}</p>
 
-  <Link to={ROUTES.COMING_SOON} className="feature-create-btn">
+  <a
+  href={GOOGLE_FORM_URL}
+  className="feature-create-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+>
   <span className="feature-btn-sparkle">✦</span>
   <span>Start Creating</span>
   <span className="feature-btn-arrow">↗</span>
-</Link>
+</a>
 
   <div className="why-vivi-line" />
 </div>
